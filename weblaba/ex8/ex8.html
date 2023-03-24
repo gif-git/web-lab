@@ -1,0 +1,29 @@
+<html> 
+<head> 
+<style> 
+img{ 
+margin:0px;
+} 
+</style> 
+<script language="javascript"> 
+var i=0; var path=new Array(); 
+path[0]="1.jpg"; 
+path[1]="2.jpg"; 
+path[2]="3.jpg"; 
+path[3]="4.png"; 
+path[4]="5.png"; 
+path[5]="6.png"; 
+function swapimage()
+{ 
+document.slid.src=path[i]; 
+if(i<path.length-1) 
+i++;
+else i=0; setTimeout("swapimage()",10000);
+} 
+window.onload=swapimage; 
+</script> 
+</head> 
+<body> 
+<img height="100" name="slid" src="file" width="500" /> 
+</body>
+</html>

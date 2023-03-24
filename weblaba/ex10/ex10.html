@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script> 
+//script for blink text 
+function blink_text() { 
+$('.blink').fadeOut(500); 
+$('.blink').fadeIn(500); 
+}
+setInterval(blink_text, 1000); //script for disable/enable button 
+$(document).ready(function() { 
+$(':input[type="submit"]').prop('disabled', true); 
+$('input[type="text"]').keyup(function() { 
+if($(this).val() != '') { 
+$(':input[type="submit"]').prop('disabled', false); 
+}
+}); 
+}); 
+</script> 
+<meta charset="utf-8"> 
+<title>JS Bin</title> 
+</head> 
+<body> 
+<p>jQuery <span class="blink">Exercises</span> and Solution</p> 
+<p>After start type in the text box the submit button will be enabled:</p> 
+<input type="text" name="textField" /> 
+<input type="submit" value="submit" /> 
+</body> 
+</html> 
